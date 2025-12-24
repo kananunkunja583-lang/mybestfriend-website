@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Memories</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="memories-page">
+
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="memories.html">Memories</a>
+  <a href="story.html">Our Story</a>
+  <a href="thankyou.html">Thank You</a>
+</nav>
+
+<div class="container">
+  <h1>Moments we kept</h1>
+
+  <div class="gallery">
+
+<div class="memory">
+  <img src="pictures/10.jpeg" alt="">
+  <p></p> </div>
+<div class="memory">
+    <img src="pictures/2.jpeg" alt="">
+  <p></p>
+</div>
+<div class="memory"><img src="pictures/3.jpeg" alt="">
+  <p></p></div>
+<div class="memory"><img src="pictures/4.jpeg" alt="">
+  <p></p></div>
+<div class="memory"><img src="pictures/5.jpeg" alt="">
+  <p></p></div>
+<div class="memory"><img src="pictures/6.jpeg" alt="">
+  <p></p></div>
+<div class="memory"><img src="pictures/7.jpeg" alt="">
+  <p></p></div>
+<div class="memory"><img src="pictures/8.jpeg" alt="">
+  <p></p></div>
+<div class="memory"><img src="pictures/9.jpeg" alt="">
+  <p></p></div>
+<div class="memory"><img src="pictures/11.jpeg" alt="">
+  <p></p></div>
+<div class="memory"><img src="pictures/11.jpeg" alt="">
+  <p></p></div>
+<div class="memory"><img src="pictures/12.jpeg" alt="">
+  <p></p></div>
+<div class="memory"><img src="pictures/13.jpeg" alt="">
+  <p></p></div>
+<div class="memory"><img src="pictures/14.jpeg" alt="">
+  <p></p></div>
+  <div class="memory"><img src="pictures/15.jpeg" alt="">
+  <p></p></div>
+  <div class="memory"><img src="pictures/16.jpeg" alt="">
+  <p></p></div>
+  <div class="memory"><img src="pictures/17.jpeg" alt="">
+  <p></p></div>
+  <div class="memory"><img src="pictures/18.jpeg" alt="">
+  <p></p></div>
+  <div class="memory"><img src="pictures/19.jpeg" alt="">
+  <p></p></div>
+  <div class="memory"><img src="pictures/20.jpeg" alt="">
+  <p></p></div>
+  <div class="memory"><img src="pictures/21.jpeg" alt="">
+  <p></p></div>
+  <div class="memory"><img src="pictures/24.jpeg" alt="">
+  <p></p></div>
+  <div class="memory"><img src="pictures/26.jpeg" alt="">
+  <p></p></div>
+  <div class="memory"><img src="pictures/27.jpeg" alt="">
+  <p></p></div>
+  <div class="memory"><img src="pictures/28.jpeg" alt="">
+  <p></p></div>
+
+  
+</div>
+  
+</div>
+<div id="lightbox">
+  <img id="lightbox-img" src="">
+</div>
+
+<script>
+  const images = document.querySelectorAll('.memory img');
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+
+  images.forEach(img => {
+    img.addEventListener('click', () => {
+      lightboxImg.src = img.src;
+      lightbox.classList.add('show');
+    });
+  });
+
+  lightbox.addEventListener('click', () => {
+    lightbox.classList.remove('show');
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>This Year</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="home-page">
+
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="memories.html">Memories</a>
+  <a href="story.html">Our Story</a>
+  <a href="thankyou.html">Thank You</a>
+</nav>
+
+<div class="home-hero">
+  <div class="hero-text">
+    <h1>This year, with you</h1>
+    <p class="hero-line">
+      Some years change us.  
+      This one stayed with me because of you.
+    </p>
+  </div>
+
+  <div class="hero-image">
+    <img src="pictures/14.jpeg" alt="Us">
+  </div>
+
+  <p class="hero-note"> I didn't know how to say this out loud so i made this...Take your time.</p>
+</div>
+
+<button id="music-toggle">♪</button>
+
+<audio id="bg-music" loop>
+  <source src="pictures/Flying Solo Clip  Julie and the Phantoms  Netflix Family-e1bd47c92edb1464c2ec65d34c34d8eb.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+  const music = document.getElementById('bg-music');
+  const toggle = document.getElementById('music-toggle');
+  let playing = false;
+
+  toggle.addEventListener('click', () => {
+    if (!playing) {
+      music.volume = 0.3;
+      music.play();
+      toggle.classList.add('active');
+    } else {
+      music.pause();
+      toggle.classList.remove('active');
+    }
+    playing = !playing;
+  });
+</script>
+
+</body>
+</html>

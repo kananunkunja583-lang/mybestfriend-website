@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Thank You</title>
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Handwritten fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Patrick+Hand&display=swap" rel="stylesheet">
+
+  <style>
+    /* ===== Thank You Page Specific CSS ===== */
+
+    body.thankyou-page {
+      background: linear-gradient(to bottom, #faf7f3 0%, #f2ece4 100%);
+      color: #2f2f2f;
+      font-family: 'Patrick Hand', 'Dancing Script', cursive;
+      overflow-x: hidden;
+      min-height: 100vh;
+    }
+
+    .container {
+      position: relative;
+      z-index: 2;
+      max-width: 750px;
+      margin: 80px auto;
+      padding: 0 20px;
+      animation: fadeIn 1.2s ease;
+    }
+
+    h1 {
+      font-size: 36px;
+      text-align: center;
+      margin-bottom: 30px;
+      opacity: 0;
+      animation: fadeInText 1.5s forwards;
+      animation-delay: 0.2s;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.8;
+      margin-bottom: 24px;
+      opacity: 0;
+      animation: fadeInText 1.5s forwards;
+      animation-delay: 0.4s;
+    }
+
+    p:last-child {
+      font-size: 20px;
+      font-weight: bold;
+      text-align: right;
+    }
+
+    /* Fade-in animations */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes fadeInText {
+      from { opacity: 0; transform: translateY(12px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ===== Snow Animation ===== */
+    .snow-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .snowflake {
+      position: absolute;
+      top: -10px;
+      color: #fff;
+      animation-name: fall;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+    }
+
+    @keyframes fall {
+      0% { transform: translateY(0) rotate(0deg); }
+      100% { transform: translateY(100vh) rotate(360deg); }
+    }
+  </style>
+</head>
+
+<body class="thankyou-page">
+    <nav>
+  <a href="index.html">Home</a>
+  <a href="memories.html">Memories</a>
+  <a href="story.html">Our Story</a>
+  <a href="thankyou.html">Thank You</a>
+</nav>
+
+  <!-- Snow Effect -->
+  <div class="snow-container"></div>
+
+  <!-- Page Content -->
+  <div class="container">
+    <h1>Merry Christmas & Happy New Year</h1>
+
+    <p>
+      I want to start by wishing you the happiest Christmas and a joyful New Year. 
+      I hope this message reminds you of how much you mean to me.
+    </p>
+
+    <p>
+      Thank you for everything.  
+      Thank you for giving me a place to call home, a place to stay, and a peace of mind that comforts me in ways words can hardly express.
+    </p>
+
+    <p>
+      Thank you for giving me the urge to pursue my goals and the courage to keep going.  
+      
+    </p>
+
+
+
+    <p>
+      Thank you for cooking for me, for the thoughtful gifts and snacks, and for celebrating my birthday.    </p>
+
+    <p>
+      Most of all, thank you for loving me — for your patience, your kindness, and your presence in my life.  
+      You’ve made this year unforgettable, and I’m so grateful to walk through life with you by my side.
+    </p>
+
+    <p style="margin-top: 40px; text-align: right;">
+      — I love you Edna.
+    </p>
+  </div>
+
+  <!-- Snow Script -->
+  <script>
+    const snowContainer = document.querySelector('.snow-container');
+    const numFlakes = 50;
+
+    for (let i = 0; i < numFlakes; i++) {
+      const flake = document.createElement('div');
+      flake.classList.add('snowflake');
+      flake.style.left = Math.random() * 100 + 'vw';
+      flake.style.animationDuration = 5 + Math.random() * 10 + 's';
+      flake.style.opacity = 0.2 + Math.random() * 0.6;
+      flake.style.fontSize = 10 + Math.random() * 15 + 'px';
+      flake.innerHTML = '❄';
+      snowContainer.appendChild(flake);
+    }
+  </script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
